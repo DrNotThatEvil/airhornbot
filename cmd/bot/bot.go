@@ -78,30 +78,114 @@ type Sound struct {
 
 // Array of all the sounds we have
 var AIRHORN *SoundCollection = &SoundCollection{
-	Prefix: "airhorn",
+	Prefix: "onvoldoende",
 	Commands: []string{
 		"!onvoldoende",
 	},
 	Sounds: []*Sound{
-		createSound("default", 1000, 250),
-		createSound("reverb", 800, 250),
-		createSound("spam", 800, 0),
-		createSound("tripletap", 800, 250),
-		createSound("fourtap", 800, 250),
-		createSound("distant", 500, 250),
-		createSound("echo", 500, 250),
-		createSound("clownfull", 250, 250),
-		createSound("clownshort", 250, 250),
-		createSound("clownspam", 250, 0),
-		createSound("highfartlong", 200, 250),
-		createSound("highfartshort", 200, 250),
-		createSound("midshort", 100, 250),
-		createSound("truck", 10, 250),
+		createSound("onvoldoende", 1000, 250),
+		createSound("rest_voldoende", 1000, 250),
+		createSound("hele_klas", 1000, 250),
+	},
+}
+
+var BIEM *SoundCollection = &SoundCollection{
+	Prefix: "biem",
+	Commands: []string{
+		"!biem",
+	},
+	Sounds: []*Sound{
+		createSound("biem", 1000, 250),
+	},
+}
+
+var DTRUE *SoundCollection = &SoundCollection{
+	Prefix: "donald",
+	Commands: []string{
+		"!dtrue",
+	},
+	Sounds: []*Sound{
+		createSound("true", 1000, 250),
+	},
+}
+
+var DCHINA *SoundCollection = &SoundCollection{
+	Prefix: "donald",
+	Commands: []string{
+		"!china",
+	},
+	Sounds: []*Sound{
+		createSound("china_1", 1000, 250),
+		createSound("china_2", 1000, 250),
+		createSound("china_3", 1000, 250),
+	},
+}
+
+var MAND *SoundCollection = &SoundCollection{
+	Prefix: "mand",
+	Commands: []string{
+		"!mand",
+	},
+	Sounds: []*Sound{
+		createSound("mand", 1000, 250),
+	},
+}
+
+var RANDOM *SoundCollection = &SoundCollection{
+	Prefix: "random",
+	Commands: []string{
+		"!random",
+	},
+	Sounds: []*Sound{
+		createSound("kinderen", 1000, 250),
+		createSound("smikkelen", 1000, 250),
+		createSound("memphis", 1000, 250),
+	},
+}
+
+var SAMSON *SoundCollection = &SoundCollection{
+	Prefix: "samson",
+	Commands: []string{
+		"!samson",
+	},
+	Sounds: []*Sound{
+		createSound("banaan", 1000, 250),
+		createSound("hoofd", 1000, 250),
+	},
+}
+
+var BMW *SoundCollection = &SoundCollection{
+	Prefix: "bmw",
+	Commands: []string{
+		"!bmw",
+	},
+	Sounds: []*Sound{
+		createSound("bmw", 1000, 250),
+	},
+}
+
+var EIGEN *SoundCollection = &SoundCollection{
+	Prefix: "eigen",
+	Commands: []string{
+		"!hallo",
+	},
+	Sounds: []*Sound{
+		createSound("hallo", 1000, 250),
+	},
+}
+
+var APPLAUSE *SoundCollection = &SoundCollection{
+	Prefix: "applause",
+	Commands: []string{
+		"!applause",
+	},
+	Sounds: []*Sound{
+		createSound("applause", 1000, 250),
 	},
 }
 
 var COLLECTIONS []*SoundCollection = []*SoundCollection{
-	AIRHORN,
+	AIRHORN, BIEM, DTRUE, DCHINA, MAND, RANDOM, SAMSON, BMW, EIGEN, APPLAUSE,
 }
 
 // Create a Sound struct
@@ -360,7 +444,7 @@ func playSound(play *Play, vc *discordgo.VoiceConnection) (err error) {
 
 func onReady(s *discordgo.Session, event *discordgo.Ready) {
 	log.Info("Recieved READY payload")
-	s.UpdateStatus(0, "airhornbot.com")
+	s.UpdateStatus(0, "gamelimits.net")
 }
 
 func onGuildCreate(s *discordgo.Session, event *discordgo.GuildCreate) {
@@ -641,7 +725,7 @@ func main() {
 	}
 
 	// We're running!
-	log.Info("AIRHORNBOT is ready to horn it up.")
+	log.Info("GLBOT is ready.")
 
 	// Wait for a signal to quit
 	c := make(chan os.Signal, 1)

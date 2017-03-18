@@ -13,7 +13,7 @@ web: cmd/webserver/web.go static
 	go build -o ${WEB_BINARY} cmd/webserver/web.go
 
 npm: static/package.json
-	cd static && npm install .
+	cd static && npm install . --no-bin-links
 
 gulp: $(JS_FILES)
 	cd static && gulp dist

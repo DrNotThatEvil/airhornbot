@@ -1,0 +1,3 @@
+./bot -r "localhost:6379" -t "Mjg1MDEzNDQzNDM2ODcxNjgw.C67E0w.-FFA04sNFVik7k3H92XzNeseOdE" -o 120487641723568128
+./dca -i 12.mp3 -raw > file.dca
+./web -i 285013443436871680 -s "8HDJt0Bsf1FgNknZScGg0QCvGByJ7hXN"
