@@ -118,7 +118,7 @@ var DCHINA *SoundCollection = &SoundCollection{
 		createSound("china_1", 1000, 250),
 		createSound("china_2", 1000, 250),
 		createSound("china_3", 1000, 250),
-        createSound("china_daft", 1000, 250),
+		createSound("china_daft", 1000, 250),
 	},
 }
 
