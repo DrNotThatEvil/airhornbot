@@ -142,7 +142,7 @@ var PRACHTIG *SoundCollection = &SoundCollection{
 	},
 }
 
-var PRACHTIG *SoundCollection = &SoundCollection{
+var ECHT *SoundCollection = &SoundCollection{
 	Prefix: "echt",
 	Commands: []string{
 		"!erg",
@@ -206,7 +206,7 @@ var APPLAUSE *SoundCollection = &SoundCollection{
 }
 
 var COLLECTIONS []*SoundCollection = []*SoundCollection{
-	AIRHORN, BIEM, DTRUE, DCHINA, MAND, RANDOM, SAMSON, BMW, EIGEN, APPLAUSE,
+	AIRHORN, BIEM, DTRUE, DCHINA, MAND, RANDOM, SAMSON, BMW, EIGEN, APPLAUSE, PRACHTIG, ECHT,
 }
 
 // Create a Sound struct
