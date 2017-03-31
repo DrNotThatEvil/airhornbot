@@ -132,6 +132,26 @@ var MAND *SoundCollection = &SoundCollection{
 	},
 }
 
+var PRACHTIG *SoundCollection = &SoundCollection{
+	Prefix: "wiebes",
+	Commands: []string{
+		"!prachtig",
+	},
+	Sounds: []*Sound{
+		createSound("prachtig", 1000, 250),
+	},
+}
+
+var PRACHTIG *SoundCollection = &SoundCollection{
+	Prefix: "echt",
+	Commands: []string{
+		"!erg",
+	},
+	Sounds: []*Sound{
+		createSound("erg", 1000, 250),
+	},
+}
+
 var RANDOM *SoundCollection = &SoundCollection{
 	Prefix: "random",
 	Commands: []string{
