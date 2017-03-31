@@ -205,8 +205,21 @@ var APPLAUSE *SoundCollection = &SoundCollection{
 	},
 }
 
+var FIETSOPA *SoundCollection = &SoundCollection{
+	Prefix: "fietsopa",
+	Commands: []string{
+		"!opa",
+		"!fietsopa",
+		"!suck",
+		"!cock",
+	},
+	Sounds: []*Sound{
+		createSound("here_suck", 1000, 250),
+	},
+}
+
 var COLLECTIONS []*SoundCollection = []*SoundCollection{
-	AIRHORN, BIEM, DTRUE, DCHINA, MAND, RANDOM, SAMSON, BMW, EIGEN, APPLAUSE, PRACHTIG, ECHT,
+	AIRHORN, BIEM, DTRUE, DCHINA, MAND, RANDOM, SAMSON, BMW, EIGEN, APPLAUSE, PRACHTIG, ECHT, FIETSOPA,
 }
 
 // Create a Sound struct
